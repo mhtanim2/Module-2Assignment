@@ -1,17 +1,19 @@
-import React from 'react';
+
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { Provider } from "react-redux";
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./assets/css/animate.min.css";
+import "./assets/css/bootstrap.css";
+import "./assets/css/style.css";
+import store from "./redux/store/store";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
