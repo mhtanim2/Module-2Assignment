@@ -1,0 +1,13 @@
+Base URL: http://localhost:4040/api/v1
+
+Routes: 
+/Registration
+/Login
+
+Protected Routes:
+/ProfileUpdate
+/ProfileDetails 
+
+
+
+ 
